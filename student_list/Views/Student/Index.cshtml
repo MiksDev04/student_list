@@ -1,0 +1,51 @@
+﻿@model List<student_list.Models.Student>
+@{
+	ViewData["Title"] = "Student";
+}
+
+<header class="container text-center p-3">
+	<h3>Student Information Records</h3>
+</header>
+<a asp-action="Create" class="btn btn-primary mb-3">Create Record</a>
+
+<div class="container table-responsive">
+	<table class="table table-hover table-bordered overflow-scroll">
+		<thead class="table-primary">
+			<tr>
+				<th>Name</th>
+				<th>Program</th>
+				<th>Year</th>
+				<th>Section</th>
+				<th>Status</th>
+				<th>School</th>
+				<th>Age</th>
+				<th>Gender</th>
+				<th>Email</th>
+				<th>Phone</th>
+				<th>Address</th>
+				<th>Controls</th>
+			</tr>
+		</thead>
+		<tbody>
+			@foreach(var s in Model) {
+				<tr>
+					<td>@s.Name</td>
+					<td>@s.Program</td>
+					<td>@s.Year</td>
+					<td>@s.Section</td>
+					<td>@s.Status</td>
+					<td>@s.School</td>
+					<td>@s.Age</td>
+					<td>@s.Gender</td>
+					<td>@s.Email</td>
+					<td><span>0</span>@s.Phone.ToString()</td>
+					<td>@s.Address</td>
+					<td>
+						<a class="btn btn-secondary" asp-action="Update" asp-route-id="@s.Id">Update</a>
+						<a class="btn btn-danger" asp-action="Delete"  asp-route-id="@s.Id">Delete</a>
+					</td>
+				</tr>
+			}
+		</tbody>
+	</table>
+</div>

@@ -1,0 +1,66 @@
+﻿@model student_list.Models.Student
+@{
+	ViewData["Title"] = "Update";
+}
+
+<header class="container p-3 text-center">
+	<h3>Update Student Information Record</h3>
+</header>
+
+<div class="container">
+	<form asp-action="Update" method="post">
+		<div class="row row-gap-3 mb-3">
+			<div class="form-group col-md-6">
+				<label for="Name">Name</label>
+				<input id="Name" type="text" class="form-control form-floating" asp-for="Name" autocomplete="off" />
+			</div>
+			<div class="form-group col-md-6">
+				<label for="Program">Program</label>
+				<input id="Program" type="text" class="form-control form-floating" asp-for="Program" autocomplete="off" />
+			</div>
+			<div class="form-group col-md-6">
+				<label for="Year">Year</label>
+				<input id="Year" type="number" class="form-control form-floating" asp-for="Year" autocomplete="off" />
+			</div>
+			<div class="form-group col-md-6">
+				<label for="Section">Section</label>
+				<input id="Section" type="text" class="form-control form-floating" asp-for="Section" autocomplete="off" />
+			</div>
+			<div class="form-group col-md-6">
+				<label for="School">Status</label>
+				<select class="form-select form-control" asp-for="Status">
+					<option>Regular</option>
+					<option>Irregular</option>
+				</select>
+			</div>
+			<div class="form-group col-md-6">
+				<label for="School">School</label>
+				<input id="School" type="text" class="form-control form-floating" asp-for="School" autocomplete="off" />
+			</div>
+			<div class="form-group col-md-6">
+				<label for="Age">Age</label>
+				<input id="Age" type="number" class="form-control form-floating" asp-for="Age" autocomplete="off" />
+			</div>
+			<div class="form-group col-md-6">
+				<label for="Gender">Gender</label>
+				<select class="form-select form-control" asp-for="Gender">
+					<option>Male</option>
+					<option>Female</option>
+				</select>
+			</div>
+			<div class="form-group col-md-6">
+				<label for="Email">Email</label>
+				<input id="Email" type="email" class="form-control form-floating" asp-for="Email" autocomplete="off" />
+			</div>
+			<div class="form-group col-md-6">
+				<label for="Phone">Phone</label>
+				<input id="Phone" type="tel" class="form-control form-floating" asp-for="Phone" autocomplete="off" />
+			</div>
+			<div class="form-group col-md-6">
+				<label for="Address">Address</label>
+				<input id="Address" type="text" class="form-control form-floating" asp-for="Address" autocomplete="off" />
+			</div>
+		</div>
+		<button type="submit" class="btn btn-primary ">Submit</button>
+	</form>
+</div>
